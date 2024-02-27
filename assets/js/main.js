@@ -1,13 +1,13 @@
-console.log("Tutto funziona");
+//console.log("Tutto funziona");
 
 //chiedo all'utente di inserire una parola tramite il prompt e la salvo in una variabile
 
 const userWord = prompt("inserisci una parola");
-console.log(userWord);
+console.log(`la parola che hai inserito è: ${userWord}`);
 let value = false;
 const list = [];
 
-//creo un ciclo for che mi scorra la stringa inserita al contrario e la salvi in un array vuoto
+/*creo un ciclo for che mi scorra la stringa inserita al contrario e la salvi in un array vuoto
 for(i=userWord.length-1; i>=0;i--){
     const caract = userWord[i];
     console.log(caract);
@@ -26,3 +26,30 @@ if(value){
 } else {
     console.log("la parola inserita è palindroma");
 }
+*/
+
+//creo la funzione che controlla se palindroma
+
+function ceckIfPalindrome(userWord){
+
+    
+    for(i=userWord.length-1; i>=0;i--){
+        const caract = userWord[i];
+        //console.log(caract);
+        list.push(caract);
+    }
+
+    for (let i = 0; i < userWord.length; i++) {
+        if (list[i] != userWord[i]){
+            value = true;
+        } 
+    }
+
+    if(value){
+        console.log("la parola inserita non è palindroma");
+    } else {
+        console.log("la parola inserita è palindroma");
+    }
+}
+
+console.log(ceckIfPalindrome(userWord));

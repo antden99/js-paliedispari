@@ -2,18 +2,18 @@
 
 //chiedo all'utente di inserire una parola tramite il prompt e la salvo in una variabile
 
-//const userWord = prompt("inserisci una parola");
-//console.log(`la parola che hai inserito è: ${userWord}`);
+const userWord = prompt("inserisci una parola");
+console.log(`la parola che hai inserito è: ${userWord}`);
 
-
-/*creo un ciclo for che mi scorra la stringa inserita al contrario e la salvi in un array vuoto
+/*
+//creo un ciclo for che mi scorra la stringa inserita al contrario e la salvi in un array vuoto
 for(i=userWord.length-1; i>=0;i--){
     const caract = userWord[i];
     console.log(caract);
     list.push(caract);
 }
 
-//creo un ciclo che mi controlla se la parola inserita è polindroma
+creo un ciclo che mi controlla se la parola inserita è polindroma
 for (let i = 0; i < userWord.length; i++) {
     if (list[i] != userWord[i]){
         value = true;
@@ -27,7 +27,7 @@ if(value){
 }
 */
 
-/*creo la funzione che controlla se palindroma
+//creo la funzione che controlla se palindroma
 
 function ceckIfPalindrome(word) {
     let value = false;
@@ -46,15 +46,13 @@ function ceckIfPalindrome(word) {
     }
 
     if (value) {
-        console.log("la parola inserita non è palindroma");
+        return console.log("la parola inserita non è palindroma");
     } else {
-        console.log("la parola inserita è palindroma");
+        return console.log("la parola inserita è palindroma");
     }
 }
 
-console.log(ceckIfPalindrome(userWord));
-*/
-
+ceckIfPalindrome(userWord);
 
 
 
@@ -71,28 +69,28 @@ console.log(`L'utente ha scelto il numero: ${userNumb}`);
 
 
 
-function evenOrOdd(sign,numb){
+function evenOrOdd(sign, numb) {
 
 
-//calcolo un numero random da 1 a 5 per il pc
-const pcRandomNumb = Math.floor(Math.random() * 5)+1;
-console.log(`Il PC ha scelto il numero: ${pcRandomNumb}`);
+    //calcolo un numero random da 1 a 5 per il pc
+    const pcRandomNumb = Math.floor(Math.random() * 5) + 1;
+    console.log(`Il PC ha scelto il numero: ${pcRandomNumb}`);
 
 
-//faccio la solla tra il numero dell'utente ed il numero randomico generato
-sum = Number(numb) + pcRandomNumb;
-console.log(`il risultato è: ${sum}`);
+    //faccio la solla tra il numero dell'utente ed il numero randomico generato
+    sum = Number(numb) + pcRandomNumb;
+    console.log(`il risultato è: ${sum}`);
 
-if ( sum % 2 == 0 && sign == "pari"){
-    console.log("numero pari ha vinto l'utente");
-} else if ( sum % 2 !=0 && sign == "dispari"){
-    console.log("numero dispari ha vinto l'utente");
-} else {
-    console.log("mi dispiace ma ha vinto il computer, riprova");
+    if (sum % 2 == 0 && sign == "pari") {
+       return console.log("numero pari ha vinto l'utente");
+    } else if (sum % 2 != 0 && sign == "dispari") {
+       return console.log("numero dispari ha vinto l'utente");
+    } else {
+      return  console.log("mi dispiace ma ha vinto il computer, riprova");
+    }
+
+
 }
 
-
-}
-
-console.log(evenOrOdd(userSign,userNumb));
+evenOrOdd(userSign, userNumb);
 

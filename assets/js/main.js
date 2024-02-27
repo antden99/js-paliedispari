@@ -63,27 +63,36 @@ console.log(ceckIfPalindrome(userWord));
 //chiedo all'utente di scegliere pari o dispari
 let userSign = prompt("Scegli: Pari o dispari?");
 userSign = userSign.toLowerCase(); //trasformo la stringa inserita in minuscolo per non avere problemi
-console.log(userSign);
+console.log(`L'utente ha scelto segno: ${userSign}`);
 
 //chiedo all'utente di inserire un numero da 1 a 5
 const userNumb = prompt("Scegli un numero da 1 a 5");
-console.log(userNumb);
+console.log(`L'utente ha scelto il numero: ${userNumb}`);
+
+
+
+function evenOrOdd(sign,numb){
+
 
 //calcolo un numero random da 1 a 5 per il pc
 const pcRandomNumb = Math.floor(Math.random() * 5)+1;
-console.log(pcRandomNumb);
+console.log(`Il PC ha scelto il numero: ${pcRandomNumb}`);
 
 
 //faccio la solla tra il numero dell'utente ed il numero randomico generato
-sum = Number(userNumb) + pcRandomNumb;
-console.log(sum);
+sum = Number(numb) + pcRandomNumb;
+console.log(`il risultato è: ${sum}`);
 
-if ( sum % 2 == 0 && userSign == "pari"){
+if ( sum % 2 == 0 && sign == "pari"){
     console.log("numero pari ha vinto l'utente");
-} else if ( sum % 2 !=0 && userSign == "dispari"){
+} else if ( sum % 2 !=0 && sign == "dispari"){
     console.log("numero dispari ha vinto l'utente");
 } else {
     console.log("mi dispiace ma ha vinto il computer, riprova");
 }
 
+
+}
+
+console.log(evenOrOdd(userSign,userNumb));
 

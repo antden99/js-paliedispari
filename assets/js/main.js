@@ -60,18 +60,30 @@ console.log(ceckIfPalindrome(userWord));
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-
-const userSign = prompt("Scegli: Pari o dispari?");
+//chiedo all'utente di scegliere pari o dispari
+let userSign = prompt("Scegli: Pari o dispari?");
+userSign = userSign.toLowerCase(); //trasformo la stringa inserita in minuscolo per non avere problemi
 console.log(userSign);
 
+//chiedo all'utente di inserire un numero da 1 a 5
 const userNumb = prompt("Scegli un numero da 1 a 5");
 console.log(userNumb);
 
-
+//calcolo un numero random da 1 a 5 per il pc
 const pcRandomNumb = Math.floor(Math.random() * 5)+1;
 console.log(pcRandomNumb);
 
-sum = userSign + pcRandomNumb;
+
+//faccio la solla tra il numero dell'utente ed il numero randomico generato
+sum = Number(userNumb) + pcRandomNumb;
 console.log(sum);
+
+if ( sum % 2 == 0 && userSign == "pari"){
+    console.log("numero pari ha vinto l'utente");
+} else if ( sum % 2 !=0 && userSign == "dispari"){
+    console.log("numero dispari ha vinto l'utente");
+} else {
+    console.log("mi dispiace ma ha vinto il computer, riprova");
+}
 
 

@@ -2,8 +2,8 @@
 
 //chiedo all'utente di inserire una parola tramite il prompt e la salvo in una variabile
 
-const userWord = prompt("inserisci una parola");
-console.log(`la parola che hai inserito è: ${userWord}`);
+//const userWord = prompt("inserisci una parola");
+//console.log(`la parola che hai inserito è: ${userWord}`);
 
 
 /*creo un ciclo for che mi scorra la stringa inserita al contrario e la salvi in un array vuoto
@@ -27,7 +27,7 @@ if(value){
 }
 */
 
-//creo la funzione che controlla se palindroma
+/*creo la funzione che controlla se palindroma
 
 function ceckIfPalindrome(word) {
     let value = false;
@@ -53,3 +53,25 @@ function ceckIfPalindrome(word) {
 }
 
 console.log(ceckIfPalindrome(userWord));
+*/
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const userSign = prompt("Scegli: Pari o dispari?");
+console.log(userSign);
+
+const userNumb = prompt("Scegli un numero da 1 a 5");
+console.log(userNumb);
+
+
+const pcRandomNumb = Math.floor(Math.random() * 5)+1;
+console.log(pcRandomNumb);
+
+sum = userSign + pcRandomNumb;
+console.log(sum);
+
+

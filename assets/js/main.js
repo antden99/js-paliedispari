@@ -4,7 +4,7 @@ console.log("Tutto funziona");
 
 const userWord = prompt("inserisci una parola");
 console.log(userWord);
-
+let value = false;
 const list = [];
 
 //creo un ciclo for che mi scorra la stringa inserita al contrario e la salvi in un array vuoto
@@ -17,6 +17,12 @@ for(i=userWord.length-1; i>=0;i--){
 //creo un ciclo che mi controlla se la parola inserita è polindroma
 for (let i = 0; i < userWord.length; i++) {
     if (list[i] != userWord[i]){
-        console.log(list[i],userWord[i] + " la parola non è palindroma perchè questi caratteri sono diversi");
+        value = true;
     } 
+}
+// controllo il valore della variabile boolena che uso per verificare 
+if(value){
+    console.log("la parola inserita non è palindroma");
+} else {
+    console.log("la parola inserita è palindroma");
 }
